@@ -1,0 +1,8 @@
+.pageTitle {
+  margin: 0;
+  color: #fff;
+  font-size: clamp(2rem, 7vw, 4rem);
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
