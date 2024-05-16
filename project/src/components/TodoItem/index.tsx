@@ -6,6 +6,7 @@ interface Todo {
   title: string
   isCompleted: boolean
 }
+
 interface TodoItem {
   todo: Todo
 }
