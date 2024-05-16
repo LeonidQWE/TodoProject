@@ -1,16 +1,24 @@
 import React from 'react'
 
-import Todo from '../Todo'
+import TodoItem from '../TodoItem'
 
 import styles from './TodoList.module.css'
 
-interface TodoListProps {
+interface Todo {
+  id: string
+  title: string
+  isCompleted: boolean
 }
 
-const TodoList: React.FC<TodoListProps> = () => {
+interface TodoListProps {
+  todos: Todo[]
+}
+
+const TodoList: React.FC<TodoListProps> = ({todos}) => {
   return (
     <div className={styles.todoList}>
-      <Todo />
+      {todos.map((todo) => <TodoItem key={todo.id} todo={todo} />
+      )}
     </div>
   )
 }
