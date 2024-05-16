@@ -1,0 +1,7 @@
+.todoList {
+  margin: clamp(1rem, 2vw, 2rem) auto 0 auto;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1rem, 3vw, 2rem);
+}
