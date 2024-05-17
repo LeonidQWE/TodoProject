@@ -16,6 +16,8 @@ export default function App() {
   const [todos, setTodos] = useState<Todo[]>([])
 
   const handleAddNewTodo = (text: string) => {
+    if (!text) return
+
     const newTodo: Todo = {
       id: crypto.randomUUID(),
       title: text,

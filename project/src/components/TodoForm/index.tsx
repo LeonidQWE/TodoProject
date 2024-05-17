@@ -16,7 +16,12 @@ const TodoForm: React.FC<TodoFromProps> = ({addNewTodo}) => {
 
   return (
     <form className={styles.todoForm} onSubmit={handleSubmitTodo}>
-      <input type="text" className={styles.todoFormInput} onChange={(event) => setTodo(event.target.value)} value={todo} placeholder="Enter New Todo"/>
+      <input
+        type="text"
+        className={styles.todoFormInput}
+        onChange={(event) => setTodo(event.target.value)}
+        value={todo}
+        placeholder="Enter New Todo"/>
       <button type="submit" className={styles.todoFormSubmit}>Submit</button>
     </form>
   )
