@@ -10,13 +10,15 @@ interface Todo {
 
 interface TodoListProps {
   todos: Todo[]
+  deleteTodo: (id: string) => void
 }
 
-const TodoList: React.FC<TodoListProps> = ({todos}) => {
+const TodoList: React.FC<TodoListProps> = ({todos, deleteTodo}) => {
+
   return (
     <div className={styles.todoList}>
       {!todos.length && <EmptyTodoListMessage>Todo List is Empty</EmptyTodoListMessage>}
-      {todos.map((todo) => <TodoItem key={todo.id} todo={todo} />)}
+      {todos.map((todo) => <TodoItem key={todo.id} todo={todo} deleteTodo={deleteTodo}/>)}
     </div>
   )
 }

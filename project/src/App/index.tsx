@@ -25,11 +25,15 @@ const App: React.FC = () => {
     setTodos([...todos, newTodo]);
   }
 
+  const handleRemoveTodo = (id: string) => {
+    setTodos(todos.filter((todo) => todo.id !== id));
+  }
+
   return (
     <div className={styles.app}>
       <PageTitle>Todo</PageTitle>
       <TodoForm addNewTodo={handleAddNewTodo} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} deleteTodo={handleRemoveTodo} />
     </div>
   )
 }

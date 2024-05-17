@@ -8,11 +8,16 @@ interface Todo {
 
 interface TodoItem {
   todo: Todo
+  deleteTodo: (id: string) => void
 }
 
-const TodoItem: React.FC<TodoItem> = ({todo}) => {
+const TodoItem: React.FC<TodoItem> = ({todo, deleteTodo}) => {
+  const handleDoubleClickDeleteTodo = (id: string) => {
+    deleteTodo(id)
+  }
+
   return (
-    <div className={styles.todo}>
+    <div className={styles.todo} onDoubleClick={() => handleDoubleClickDeleteTodo(todo.id)}>
       <h2 className={styles.todoTitle}>{todo.title}</h2>
       <input type="checkbox" className={styles.todoCheckbox} />
     </div>
