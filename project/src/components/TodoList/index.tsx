@@ -1,9 +1,6 @@
-import React from 'react'
-
-import TodoItem from '../TodoItem'
-import EmptyTodoListMessage from '../EmptyTodoListMessage'
-
-import styles from './TodoList.module.css'
+import TodoItem from '../TodoItem';
+import EmptyTodoListMessage from '../EmptyTodoListMessage';
+import styles from './TodoList.module.css';
 
 interface Todo {
   id: string

@@ -1,5 +1,4 @@
-import React from 'react'
-import styles from './Todo.module.css'
+import styles from './Todo.module.css';
 
 interface Todo {
   id: string

@@ -1,5 +1,4 @@
-import React from 'react'
-import styles from './EmptyTodoListMessage.module.css'
+import styles from './EmptyTodoListMessage.module.css';
 
 interface EmptyTodoListMessageProps {
   children: string

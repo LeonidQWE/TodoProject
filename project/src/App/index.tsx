@@ -1,10 +1,8 @@
-import { useState } from 'react'
-
-import PageTitle from '../components/PageTitle'
-import TodoForm from '../components/TodoForm'
-import TodoList from '../components/TodoList'
-
-import styles from './App.module.css'
+import { useState } from 'react';
+import PageTitle from '../components/PageTitle';
+import TodoForm from '../components/TodoForm';
+import TodoList from '../components/TodoList';
+import styles from './App.module.css';
 
 interface Todo {
   id: string
@@ -12,11 +10,11 @@ interface Todo {
   isCompleted: boolean
 }
 
-export default function App() {
+const App: React.FC = () => {
   const [todos, setTodos] = useState<Todo[]>([])
 
   const handleAddNewTodo = (text: string) => {
-    if (!text) return
+    if (!text) return;
 
     const newTodo: Todo = {
       id: crypto.randomUUID(),
@@ -35,3 +33,5 @@ export default function App() {
     </div>
   )
 }
+
+export default App

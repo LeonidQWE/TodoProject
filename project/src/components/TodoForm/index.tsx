@@ -1,5 +1,5 @@
-import React, {useState} from 'react'
-import styles from './TofoForm.module.css'
+import {useState} from 'react';
+import styles from './TofoForm.module.css';
 
 interface TodoFromProps {
   addNewTodo: (text: string) => void
