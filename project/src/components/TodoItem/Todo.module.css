@@ -4,7 +4,6 @@
   background-color: #fff;
   border-radius: 10px;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -16,4 +15,11 @@
 .todoCheckbox {
   width: 24px;
   height: 24px;
+}
+
+.todoIcon {
+  width: clamp(1rem, 3vw, 2rem);
+  height: clamp(1rem, 3vw, 2rem);
+  color: rgb(38, 145, 40);
+  margin-right: clamp(0.5rem, 2vw, 1.5rem);
 }

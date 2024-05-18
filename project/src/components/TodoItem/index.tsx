@@ -1,3 +1,4 @@
+import { RiTodoFill } from 'react-icons/ri';
 import styles from './Todo.module.css';
 
 interface Todo {
@@ -18,6 +19,7 @@ const TodoItem: React.FC<TodoItem> = ({todo, deleteTodo}) => {
 
   return (
     <div className={styles.todo} onDoubleClick={() => handleDoubleClickDeleteTodo(todo.id)}>
+      <RiTodoFill className={styles.todoIcon}/>
       <h2 className={styles.todoTitle}>{todo.title}</h2>
       <input type="checkbox" className={styles.todoCheckbox} />
     </div>
