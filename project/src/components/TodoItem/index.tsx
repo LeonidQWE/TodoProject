@@ -1,18 +1,8 @@
 import { RiTodoFill } from 'react-icons/ri';
+import TodoItemProps from '../../interfaces/TodoItemProps';
 import styles from './Todo.module.css';
 
-interface Todo {
-  id: string
-  title: string
-  isCompleted: boolean
-}
-
-interface TodoItem {
-  todo: Todo
-  deleteTodo: (id: string) => void
-}
-
-const TodoItem: React.FC<TodoItem> = ({todo, deleteTodo}) => {
+const TodoItem: React.FC<TodoItemProps> = ({todo, deleteTodo}) => {
   const handleDoubleClickDeleteTodo = (id: string) => {
     deleteTodo(id)
   }

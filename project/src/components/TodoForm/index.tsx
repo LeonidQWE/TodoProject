@@ -1,9 +1,6 @@
 import {useState} from 'react';
+import TodoFromProps from '../../interfaces/TodoFormProps';
 import styles from './TofoForm.module.css';
-
-interface TodoFromProps {
-  addNewTodo: (text: string) => void
-}
 
 const TodoForm: React.FC<TodoFromProps> = ({addNewTodo}) => {
   const [todo, setTodo] = useState('');

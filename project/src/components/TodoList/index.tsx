@@ -1,17 +1,7 @@
 import TodoItem from '../TodoItem';
 import EmptyTodoListMessage from '../EmptyTodoListMessage';
+import TodoListProps from '../../interfaces/TodoListProps';
 import styles from './TodoList.module.css';
-
-interface Todo {
-  id: string
-  title: string
-  isCompleted: boolean
-}
-
-interface TodoListProps {
-  todos: Todo[]
-  deleteTodo: (id: string) => void
-}
 
 const TodoList: React.FC<TodoListProps> = ({todos, deleteTodo}) => {
 
