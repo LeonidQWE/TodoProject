@@ -2,6 +2,7 @@ import { useState } from 'react';
 import PageTitle from '../components/PageTitle';
 import TodoForm from '../components/TodoForm';
 import TodoList from '../components/TodoList';
+import TodoTask from '../class/TodoTask';
 import Todo from '../interfaces/Todo';
 import styles from './App.module.css';
 
@@ -10,16 +11,11 @@ const App: React.FC = () => {
 
   const handleAddNewTodo = (text: string) => {
     if (!text) return;
-
-    const newTodo: Todo = {
-      id: crypto.randomUUID(),
-      title: text,
-      isCompleted: false,
-    }
-
+    const newTodo: Todo = new TodoTask(text);
     setTodos([...todos, newTodo]);
-  }
 
+  }
+  
   const handleRemoveTodo = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
