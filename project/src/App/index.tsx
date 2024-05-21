@@ -13,9 +13,8 @@ const App: React.FC = () => {
     if (!text) return;
     const newTodo: Todo = new TodoTask(text);
     setTodos([...todos, newTodo]);
-
   }
-  
+
   const handleRemoveTodo = (id: string) => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
