@@ -19,11 +19,22 @@ const App: React.FC = () => {
     setTodos(todos.filter((todo) => todo.id !== id));
   }
 
+  const handleToggleCompleteTodo = (id: string) => {
+    setTodos(todos.map((todo) => {
+      return todo.id === id
+        ? {...todo, isCompleted: !todo.isCompleted}
+        : {...todo}
+    }))
+  }
+
   return (
     <div className={styles.app}>
       <PageTitle>Todo</PageTitle>
       <TodoForm addNewTodo={handleAddNewTodo} />
-      <TodoList todos={todos} deleteTodo={handleRemoveTodo} />
+      <TodoList
+        todos={todos}
+        deleteTodo={handleRemoveTodo}
+        toggleCompleteTodo={handleToggleCompleteTodo}/>
     </div>
   )
 }

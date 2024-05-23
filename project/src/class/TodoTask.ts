@@ -1,4 +1,6 @@
-class TodoTask {
+import Todo from '../interfaces/Todo'
+
+class TodoTask implements Todo {
   readonly id: string
   title: string
   isCompleted: boolean
