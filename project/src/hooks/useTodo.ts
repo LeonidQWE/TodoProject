@@ -23,11 +23,16 @@ const useTodo = () => {
     }))
   }
 
+  const deleteAllTodos = () => {
+    setTodos([])
+  }
+
   return {
     todos,
     addNewTodo,
     deleteTodo,
     toggleCompleteTodo,
+    deleteAllTodos,
   }
 }
 
